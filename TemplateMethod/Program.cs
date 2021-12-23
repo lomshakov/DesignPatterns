@@ -8,11 +8,14 @@ namespace TemplateMethod
         // при этом оставляя реализацию отдельных шагов в этом алгоритме на усмотрение производных классов.
         static void Main(string[] args)
         {
-            TopPart topPart = new TopPart();
-            topPart.Make();
+            Console.WriteLine("Один и тот же клиентский код может работать с разными подклассами:");
 
-            BottomPart bottomPart = new BottomPart();
-            bottomPart.Make();
+            Client.ClientCode(new ConcreteClass1());
+
+            Console.Write("\n");
+            
+            Console.WriteLine("Один и тот же клиентский код может работать с разными подклассами:");
+            Client.ClientCode(new ConcreteClass2());
 
             Console.ReadKey();
         }

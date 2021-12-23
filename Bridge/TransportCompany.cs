@@ -11,7 +11,7 @@ namespace Bridge
 
         protected TransportCompany(ICarrier carrier)
         {
-            Carrier = carrier;
+            _carrier = carrier;
         }
 
         public ICarrier Carrier
@@ -27,7 +27,7 @@ namespace Bridge
 
         public abstract void SendNotification();
     }
-
+    
     class TransportCompanyA : TransportCompany
     {
         public TransportCompanyA(ICarrier carrier) : base(carrier)
